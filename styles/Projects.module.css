@@ -1,0 +1,40 @@
+.listItem {
+    display: inline-block;
+    position: relative;
+    color: black;
+    cursor: pointer;
+    font-size: 3rem;
+    padding-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .listItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9f9618;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .listItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .container {
+    width: 30rem;
+    height: 35rem;
+    position: absolute;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 30% 70% 70% 30% / 30% 13% 87% 70% ;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    bottom: 5%;
+    left: -25%;
+    z-index: -1;
+  }
